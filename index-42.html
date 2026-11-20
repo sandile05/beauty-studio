@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Beauty Studio</title>
+<meta name="description" content="Nails, brows, lashes and hair by appointment in Sandton, Johannesburg. Prices and booking on WhatsApp.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Beauty Studio | Sandton, Johannesburg">
+<meta property="og:description" content="Nails, brows, lashes and hair by appointment. See prices and book on WhatsApp.">
+<meta property="og:image" content="https://res.cloudinary.com/durqfeb2i/image/upload/f_jpg,q_auto,c_fill,g_auto,w_1200,h_630/v1789911618/de606980808dff2cc6e316cebf7f8f18_rxvfph.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#C8391F">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23C8391F'/%3E%3Ctext x='16' y='23' font-size='20' font-family='Arial' font-weight='700' text-anchor='middle' fill='white'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Karla:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#fff; --ink:#161616; --muted:#595959; --line:#e4e4e4; --accent:#C8391F;
+  --pad:clamp(20px,5vw,64px); --sec:clamp(64px,10vw,120px);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:16px}
+html,body{overflow-x:clip}
+body{font:400 17px/1.55 "Karla",system-ui,sans-serif;color:var(--ink);background:var(--bg);padding-bottom:calc(72px + env(safe-area-inset-bottom,0px))}
+h1,h2,h3{font-family:"Archivo",system-ui,sans-serif;font-weight:800;letter-spacing:-.03em;line-height:1}
+h2{font-size:clamp(2rem,5vw,3.25rem)}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.wrap{max-width:1200px;margin:0 auto;padding:0 var(--pad)}
+.section{padding-top:var(--sec);padding-bottom:var(--sec)}
+[hidden]{display:none!important}
+.split{display:grid;grid-template-columns:minmax(0,1fr);gap:40px}
+.btn{display:inline-block;background:var(--accent);color:#fff;font:700 1rem "Archivo",system-ui,sans-serif;padding:16px 32px;text-decoration:none}
+.btn:hover{background:var(--ink)}
+.ph{width:100%;height:100%;background:#eee;display:grid;place-items:center;color:#6b6b6b;font-size:.9rem}
+img{display:block;width:100%;height:100%;object-fit:cover}
+
+.top{display:flex;justify-content:space-between;align-items:center;padding:20px var(--pad);max-width:1200px;margin:0 auto}
+.logo{font:800 1.2rem "Archivo",system-ui,sans-serif;letter-spacing:-.02em;text-decoration:none}
+.nav{display:none}
+.nav a{margin-left:32px;text-decoration:none;font-weight:700}
+.nav a:hover{text-decoration:underline;text-decoration-color:var(--accent);text-decoration-thickness:3px;text-underline-offset:6px}
+
+.hero{display:grid;gap:32px;padding-bottom:var(--sec);overflow-x:clip}
+.hero h1{font-size:clamp(3.4rem,17vw,6rem);letter-spacing:-.05em;line-height:.88}
+.hero h1 span{display:block;width:max-content;max-width:100%}
+.hero h1 span:nth-child(even){color:var(--accent)}
+.hero h1 span,.tab,.facts div{will-change:transform}
+.hero .shot img{position:absolute;left:0;top:-10%;height:120%;width:100%;transform:translate3d(0,var(--py,0px),0);will-change:transform}
+.visual{position:relative;padding:0 16px 16px 0}
+.frame{position:relative}
+.frame::before{content:"";position:absolute;inset:16px -16px -16px 16px;background:var(--accent);transform:translate3d(0,var(--by,0px),0)}
+.shot{position:relative;aspect-ratio:4/5;overflow:hidden;background:#eee}
+.tab{position:absolute;left:0;bottom:16px;width:min(80%,320px);background:var(--bg);padding:24px 24px 16px 0}
+.tab p{font-size:1rem;margin-bottom:16px}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--ink);margin-top:8px}
+.facts div{padding:16px 12px 0 0}
+.facts dt{color:var(--muted);font-size:.9rem}
+.facts dd{font:700 1.15rem/1.2 "Archivo",system-ui,sans-serif}
+
+.services{border-top:1px solid var(--line)}
+.row{display:grid;grid-template-columns:72px minmax(0,1fr) auto;gap:4px 20px;padding:20px 0;border-bottom:1px solid var(--line);align-items:start}
+.row .thumb{grid-row:1 / span 2;width:72px;height:72px;overflow:hidden;box-shadow:6px 6px 0 var(--accent);transition:box-shadow .2s,transform .2s}
+.row:hover .thumb{box-shadow:0 0 0 var(--accent);transform:translate(6px,6px)}
+.row:first-child{padding-top:0}
+.row h3{font-size:1.4rem;letter-spacing:-.02em;grid-column:2}
+@media(prefers-reduced-motion:reduce){.row .thumb{transition:none}}
+.row p{grid-column:2;color:var(--muted)}
+.row .price{grid-row:1;grid-column:3;font:700 1.25rem "Archivo",system-ui,sans-serif;white-space:nowrap;color:var(--accent)}
+.price .from{color:var(--muted);font-weight:500;font-size:.9rem;margin-right:4px}
+.list{border-top:0}
+
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:48px}
+.grid > div{aspect-ratio:1;overflow:hidden}
+.grid > div:first-child{grid-column:span 2;aspect-ratio:4/3;box-shadow:12px 12px 0 var(--accent);margin-bottom:12px}
+.more{display:inline-block;margin:24px 28px 0 0;font-weight:700;text-underline-offset:5px}
+
+.tile{display:block;width:100%;height:100%;padding:0;border:0;background:none;cursor:zoom-in}
+
+.lb{width:100%;height:100%;max-width:none;max-height:none;border:0;padding:0;background:var(--bg);color:var(--ink)}
+.lb[open]{display:block}
+.lb::backdrop{background:#fff}
+.lbin{height:100%;max-width:860px;margin:0 auto;padding:0 var(--pad);display:flex;flex-direction:column}
+.lbtop{display:flex;justify-content:space-between;align-items:center;height:68px;flex:none;font:700 .95rem "Archivo",system-ui,sans-serif}
+.lbtop button{border:1px solid var(--ink);background:none;color:var(--ink);font:700 .95rem "Archivo",system-ui,sans-serif;padding:10px 18px;cursor:pointer}
+.lbtop button:hover{background:var(--ink);color:#fff}
+.stage{flex:1;min-height:0;display:flex;align-items:center;justify-content:center;padding:8px 16px 16px 0}
+.lb img{width:auto;height:auto;max-width:100%;max-height:calc(100vh - 290px);max-height:calc(100dvh - 290px);object-fit:contain;box-shadow:14px 14px 0 var(--accent)}
+.lbcap{flex:none;padding:14px 0 12px;min-height:76px}
+.lbcap h3{font-size:1.5rem;letter-spacing:-.02em}
+.lbcap p{color:var(--muted);margin-top:4px}
+.lbctl{flex:none;display:flex;gap:12px;padding:0 0 calc(16px + env(safe-area-inset-bottom,0px))}
+.lbctl .btn{flex:1;text-align:center}
+.lbctl button{flex:none;width:56px;border:1px solid var(--ink);background:none;color:var(--ink);display:grid;place-items:center;cursor:pointer}
+.lbctl button:hover{background:var(--ink);color:#fff}
+.lb svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:2.2}
+
+.info h3{font-size:1.25rem;letter-spacing:-.02em;margin:0 0 8px}
+.info p{margin-bottom:32px}
+.hours{list-style:none;border-top:1px solid var(--ink);max-width:420px;margin-bottom:32px}
+.hours li{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:14px 0;border-bottom:1px solid var(--line)}
+.hours .day{display:flex;align-items:center;gap:10px;font:700 1.05rem "Archivo",system-ui,sans-serif}
+.hours .time{white-space:nowrap}
+.hours .closed .time{color:var(--muted)}
+.hours .today .day::before{content:"";width:8px;height:8px;background:var(--accent);flex:none}
+.hours .today .time{font-weight:700}
+.hours .tag{font:700 .85rem "Karla",system-ui,sans-serif;color:var(--accent)}
+.info a{text-underline-offset:4px}
+.visitPhoto{aspect-ratio:3/2;overflow:hidden;margin:0 12px 44px 0;box-shadow:12px 12px 0 var(--accent)}
+.map{width:100%;height:340px;border:0;background:#eee}
+
+footer{border-top:1px solid var(--line);padding:32px 0;color:var(--muted);font-size:.95rem}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px}
+
+.bar{position:fixed;left:0;right:0;bottom:0;padding:12px var(--pad) calc(12px + env(safe-area-inset-bottom,0px));background:var(--bg);border-top:1px solid var(--line);z-index:5}
+.bar a{display:block;text-align:center}
+
+@media(min-width:720px){
+  .hero{grid-template-columns:7fr 5fr;grid-template-areas:"h v" "f f";gap:48px 64px;align-items:end}
+  .hero h1{grid-area:h;font-size:clamp(5rem,10.5vw,9.5rem)}
+  .visual{grid-area:v}
+  .facts{grid-area:f}
+  body{padding-bottom:0}
+  .nav{display:block}
+  .bar{display:none}
+  .row{grid-template-columns:104px minmax(0,1fr) auto}
+  .row .thumb{width:104px;height:104px;box-shadow:8px 8px 0 var(--accent)}
+  .row:hover .thumb{box-shadow:0 0 0 var(--accent);transform:translate(8px,8px)}
+  .grid > div:first-child{grid-row:span 2;aspect-ratio:auto}
+  .split{grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:64px}
+  .grid{grid-template-columns:repeat(4,1fr);gap:20px}
+  .visit-cols{display:grid;grid-template-columns:1fr 1.2fr;gap:48px}
+}
+</style>
+</head>
+
+<body>
+
+<header class="top">
+  <a class="logo" href="#" id="logo">Beauty Studio</a>
+  <nav class="nav" aria-label="Main">
+    <a href="#services">Services</a>
+    <a href="#work">Work</a>
+    <a href="#visit">Visit</a>
+  </nav>
+</header>
+
+<main>
+
+<section class="wrap hero" aria-label="Welcome">
+  <h1 id="headline"></h1>
+  <div class="visual">
+    <div class="frame"><div class="shot" id="heroPhoto"></div></div>
+    <div class="tab">
+      <p id="tagline"></p>
+      <a class="btn book" href="#">Book</a>
+    </div>
+  </div>
+  <dl class="facts" id="facts"></dl>
+</section>
+
+<section class="section wrap" id="services">
+  <div class="split">
+    <h2>Services and prices</h2>
+    <div class="services list" id="serviceList"></div>
+  </div>
+</section>
+
+<section class="section wrap" id="work">
+  <h2>Recent work</h2>
+  <div class="grid" id="gallery"></div>
+  <a class="more" id="igLink" href="#" hidden>See more on Instagram</a>
+  <a class="more" id="ttLink" href="#" hidden>Watch on TikTok</a>
+</section>
+
+<section class="section wrap" id="visit">
+  <div class="split">
+    <h2>Visit the studio</h2>
+    <div class="visit-cols">
+      <div class="info">
+        <div class="visitPhoto" id="visitPhoto"></div>
+        <h3>Address</h3>
+        <p id="address"></p>
+        <h3>Hours</h3>
+        <ul class="hours" id="hours"></ul>
+        <h3>Contact</h3>
+        <p id="contact"></p>
+      </div>
+      <div>
+        <iframe class="map" id="map" title="Map showing the studio location" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <a class="more" id="mapLink" href="#" target="_blank" rel="noopener">Open in Google Maps</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span id="copy"></span>
+    <span id="built"></span>
+  </div>
+</footer>
+
+<div class="bar"><a class="btn book" href="#">Book</a></div>
+
+<dialog class="lb" id="lb" aria-label="Photo viewer">
+  <div class="lbin">
+    <div class="lbtop">
+      <span id="lbCount" aria-live="polite"></span>
+      <button type="button" id="lbClose">Close</button>
+    </div>
+    <div class="stage" id="stage"><img id="lbImg" alt=""></div>
+    <div class="lbcap" id="lbCap">
+      <h3 id="lbTitle"></h3>
+      <p id="lbPrice"></p>
+    </div>
+    <div class="lbctl">
+      <button type="button" id="lbPrev" aria-label="Previous photo"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+      <a class="btn" id="lbBook" href="#" target="_blank" rel="noopener">Book</a>
+      <button type="button" id="lbNext" aria-label="Next photo"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
+    </div>
+  </div>
+</dialog>
+
+<script>
+const CONFIG = {
+  name: "Beauty Studio",
+  headline: ["Nails.", "Brows.", "Lashes.", "Hair."],
+  tagline: "By appointment in Sandton, Johannesburg.",
+  city: "Sandton, Johannesburg",
+  facts: [["Open", "Tue to Sun"], ["From", "R320"], ["Where", "Sandton"]],
+  schemaHours: ["Tu-Fr 09:00-19:00", "Sa 08:00-18:00", "Su 10:00-16:00"],
+  accent: "#C8391F",
+
+  whatsapp: "27000000000",
+  bookingMessage: "Hi, I would like to book a session.",
+
+  address: "Studio 14, The Precinct, Sandton, Johannesburg, 2196",
+  hours: [
+    ["Tuesday to Friday", "9am to 7pm", "Tu-Fr"],
+    ["Saturday", "8am to 6pm", "Sa"],
+    ["Sunday", "10am to 4pm", "Su"],
+    ["Monday", "Closed", "Mo"]
+  ],
+
+  services: [
+    { name: "Nail sculpting",   note: "Full set with custom art. 2.5 to 4 hours.", photo: "https://res.cloudinary.com/durqfeb2i/image/upload/v1789911393/b1fcdff278f869efdb89e98260cf5b19_x7o4wu.jpg", price: "From R650" },
+    { name: "Brow shaping",     note: "Mapping, shaping, tint or lamination. 1 to 1.5 hours.", photo: "https://res.cloudinary.com/durqfeb2i/image/upload/v1789911497/c07ac2af2650a59715e2ebe6e300f714_rrojvb.jpg", price: "From R320" },
+    { name: "Lash extensions",  note: "Classic to volume, or a lash lift. 1.5 to 3 hours.", photo: "https://res.cloudinary.com/durqfeb2i/image/upload/v1789911502/9274786030112a6135ab335b202ce544_i36jkr.jpg", price: "From R450" },
+    { name: "Soft glam",        note: "Full makeup for your skin tone and occasion. 1.5 to 2 hours.", photo: "https://res.cloudinary.com/durqfeb2i/image/upload/v1789911449/4278530398183adf7aac72d3bbc7238a_nkl450.jpg", price: "From R550" },
+    { name: "Hair installs",    note: "Wigs, frontals and protective styles. 3 to 6 hours.", photo: "https://res.cloudinary.com/durqfeb2i/image/upload/v1789911623/056d5d99dc2b289d2fade93a33ade712_jyaay7.jpg", price: "From R850" }
+  ],
+
+  photos: {
+    hero: "https://res.cloudinary.com/durqfeb2i/image/upload/v1789911618/de606980808dff2cc6e316cebf7f8f18_rxvfph.jpg",
+    visit: "https://res.cloudinary.com/durqfeb2i/image/upload/v1794991621/b598f11704b58be9f6ed18d4418afaad_w6bcey.jpg",
+    gallery: [
+      "https://res.cloudinary.com/durqfeb2i/image/upload/v1789911448/067700c35a774da3a234d1a731a29ba8_wxgqvf.jpg",
+      "https://res.cloudinary.com/durqfeb2i/image/upload/v1789911498/32b7434f9f7b92464e07427d326b1c4f_wsrsce.jpg",
+      "https://res.cloudinary.com/durqfeb2i/image/upload/v1789911394/4f24e4e04a7233de0c725c613e8d6aaf_yxodg7.jpg",
+      "https://res.cloudinary.com/durqfeb2i/image/upload/v1789911621/a7721b56c6898f835d76cceb9d35db82_caucqf.jpg",
+      "https://res.cloudinary.com/durqfeb2i/image/upload/v1789911497/c3a5eace9d5075fa24d6b845111bd725_fjfuhz.jpg",
+      "https://res.cloudinary.com/durqfeb2i/image/upload/v1789911449/07e50b0dcb6103482c57a12c3810f997_tqupnf.jpg",
+      "https://res.cloudinary.com/durqfeb2i/image/upload/v1789911619/b7ac918d203d84cea0aa7242cc25d0b7_p5gwsw.jpg",
+      "https://res.cloudinary.com/durqfeb2i/image/upload/v1789911503/87a8e313d9da6ec08b94cec6423a79c8_foswdd.jpg",
+      "https://res.cloudinary.com/durqfeb2i/image/upload/v1789911623/e5f04db4c4599f3b5b0dcc4cea059a05_vzo4bv.jpg"
+    ],
+    alt: "Recent work from the studio"
+  },
+
+  social: { instagram: "", tiktok: "", facebook: "" },
+
+  builtBy: { name: "Ambient Electron", url: "https://ambientelectron.co.za", tiktok: "", instagram: "" }
+};
+
+const C = CONFIG;
+const $ = s => document.querySelector(s);
+const opt = (u, w) => /res\.cloudinary\.com\/[^/]+\/image\/upload\/v\d/.test(u)
+  ? u.replace("/upload/", `/upload/f_auto,q_auto,w_${w}/`) : u;
+const pic = (src, alt, label, eager, w = 800) =>
+  src ? `<img src="${opt(src, w)}" alt="${alt}" ${eager ? "" : 'loading="lazy"'}>` : `<div class="ph">${label}</div>`;
+
+if (/0{6,}/.test(C.whatsapp)) console.warn("Set your WhatsApp number in CONFIG before launch.");
+
+document.documentElement.style.setProperty("--accent", C.accent);
+document.title = `${C.name} | ${C.city}`;
+$("#logo").textContent = C.name;
+$("#headline").innerHTML = C.headline.map(w => `<span>${w}</span>`).join("");
+$("#facts").innerHTML = C.facts.map(f => `<div><dt>${f[0]}</dt><dd>${f[1]}</dd></div>`).join("");
+$("#tagline").textContent = C.tagline;
+$("#heroPhoto").innerHTML = pic(C.photos.hero, C.name, "Hero photo", true, 1000);
+
+const waLink = `https://wa.me/${C.whatsapp}?text=${encodeURIComponent(C.bookingMessage)}`;
+document.querySelectorAll(".book").forEach(a => { a.href = waLink; a.target = "_blank"; a.rel = "noopener"; });
+
+$("#serviceList").innerHTML = C.services.map(s =>
+  `<div class="row"><div class="thumb">${pic(s.photo, s.name, "", false, 300)}</div><h3>${s.name}</h3><span class="price">${s.price.replace(/^(from)\s+/i, '<span class="from">$1</span> ')}</span><p>${s.note}</p></div>`
+).join("");
+
+const gal = C.photos.gallery.map(g => typeof g === "string" ? { src: g } : g);
+$("#gallery").innerHTML = gal.map(({ src }, i) =>
+  { const img = pic(src, C.photos.alt, "Photo " + (i + 1), false, i === 0 ? 1200 : 600);
+    return `<div>${src ? `<button type="button" class="tile" data-i="${i}" aria-label="Open photo ${i + 1}">${img}</button>` : img}</div>`; }
+).join("");
+[["#igLink", "instagram", "https://instagram.com/"], ["#ttLink", "tiktok", "https://tiktok.com/@"]].forEach(([id, key, base]) => {
+  if (!C.social[key]) return;
+  const a = $(id);
+  a.href = base + C.social[key];
+  a.target = "_blank"; a.rel = "noopener"; a.hidden = false;
+});
+
+const q = encodeURIComponent(C.address);
+$("#visitPhoto").innerHTML = pic(C.photos.visit, C.name, "Studio photo", false, 900);
+$("#address").textContent = C.address;
+const DAYS = ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"];
+const covers = (code, d) => {
+  const [a, b] = (code || "").split("-"), from = DAYS.indexOf(a);
+  if (from < 0) return false;
+  if (!b) return from === d;
+  const to = DAYS.indexOf(b);
+  return from <= to ? d >= from && d <= to : d >= from || d <= to;
+};
+const today = new Date().getDay();
+$("#hours").innerHTML = C.hours.map(([day, time, code]) => {
+  const isToday = covers(code, today), closed = /^closed$/i.test(time);
+  return `<li class="${isToday ? "today " : ""}${closed ? "closed" : ""}"><span class="day">${day}${isToday ? '<span class="tag">Today</span>' : ""}</span><span class="time">${time}</span></li>`;
+}).join("");
+$("#map").src = `https://www.google.com/maps?q=${q}&output=embed`;
+$("#mapLink").href = `https://www.google.com/maps/search/?api=1&query=${q}`;
+
+const links = [`<a href="${waLink}" target="_blank" rel="noopener">WhatsApp</a>`];
+if (C.social.instagram) links.push(`<a href="https://instagram.com/${C.social.instagram}" target="_blank" rel="noopener">Instagram</a>`);
+if (C.social.tiktok) links.push(`<a href="https://tiktok.com/@${C.social.tiktok}" target="_blank" rel="noopener">TikTok</a>`);
+if (C.social.facebook) links.push(`<a href="https://facebook.com/${C.social.facebook}" target="_blank" rel="noopener">Facebook</a>`);
+$("#contact").innerHTML = links.join("<br>");
+
+$("#copy").textContent = `\u00A9 ${new Date().getFullYear()} ${C.name}`;
+const B = C.builtBy;
+const own = [`<a href="${B.url}" target="_blank" rel="noopener">${B.name}</a>`];
+if (B.tiktok) own.push(`<a href="https://tiktok.com/@${B.tiktok}" target="_blank" rel="noopener">TikTok</a>`);
+if (B.instagram) own.push(`<a href="https://instagram.com/${B.instagram}" target="_blank" rel="noopener">Instagram</a>`);
+$("#built").innerHTML = "Built by " + own.join(", ");
+
+$('meta[name="description"]').content = `${C.headline.join(" ")} ${C.tagline}`;
+const placeholderNumber = /0{6,}/.test(C.whatsapp);
+const ld = {
+  "@context": "https://schema.org",
+  "@type": "BeautySalon",
+  name: C.name,
+  description: `${C.headline.join(" ")} ${C.tagline}`,
+  image: C.photos.hero ? opt(C.photos.hero, 1200) : undefined,
+  telephone: placeholderNumber ? undefined : "+" + C.whatsapp,
+  address: { "@type": "PostalAddress", streetAddress: C.address },
+  openingHours: C.schemaHours,
+  sameAs: [
+    C.social.instagram && "https://instagram.com/" + C.social.instagram,
+    C.social.tiktok && "https://tiktok.com/@" + C.social.tiktok,
+    C.social.facebook && "https://facebook.com/" + C.social.facebook
+  ].filter(Boolean)
+};
+const ldTag = document.createElement("script");
+ldTag.type = "application/ld+json";
+ldTag.textContent = JSON.stringify(ld);
+document.head.appendChild(ldTag);
+
+const lb = $("#lb"), lbImg = $("#lbImg");
+const shots = gal.map((g, i) => ({ ...g, i })).filter(x => x.src);
+let cur = 0;
+
+function show(n) {
+  cur = (n + shots.length) % shots.length;
+  const g = shots[cur];
+  const svc = C.services.find(x => x.name.toLowerCase() === (g.service || "").toLowerCase());
+  const title = svc ? svc.name : (g.caption || "");
+  lbImg.src = opt(g.src, 1600);
+  lbImg.alt = title || `${C.photos.alt}, photo ${cur + 1} of ${shots.length}`;
+  $("#lbCount").textContent = `${cur + 1} of ${shots.length}`;
+  $("#lbTitle").textContent = title;
+  $("#lbPrice").textContent = svc ? svc.price : "";
+  $("#lbCap").style.visibility = title ? "visible" : "hidden";
+  const msg = title ? `Hi, I would like to book ${title}.` : C.bookingMessage;
+  const book = $("#lbBook");
+  book.href = `https://wa.me/${C.whatsapp}?text=${encodeURIComponent(msg)}`;
+  book.textContent = title ? "Book this" : "Book";
+  [cur + 1, cur - 1].forEach(k => { new Image().src = opt(shots[(k + shots.length) % shots.length].src, 1600); });
+}
+function openAt(galleryIndex) {
+  const n = shots.findIndex(x => x.i === galleryIndex);
+  if (n < 0) return;
+  show(n);
+  lb.showModal();
+  document.body.style.overflow = "hidden";
+}
+$("#gallery").addEventListener("click", e => {
+  const b = e.target.closest(".tile");
+  if (b) openAt(+b.dataset.i);
+});
+if (shots.length < 2) { $("#lbPrev").hidden = true; $("#lbNext").hidden = true; }
+$("#lbPrev").onclick = () => show(cur - 1);
+$("#lbNext").onclick = () => show(cur + 1);
+$("#lbClose").onclick = () => lb.close();
+lb.addEventListener("close", () => { document.body.style.overflow = ""; });
+lb.addEventListener("keydown", e => {
+  if (e.key === "ArrowLeft") show(cur - 1);
+  if (e.key === "ArrowRight") show(cur + 1);
+});
+$("#stage").addEventListener("click", e => { if (e.target.id === "stage") lb.close(); });
+
+let x0 = null;
+$("#stage").addEventListener("touchstart", e => { x0 = e.touches[0].clientX; }, { passive: true });
+$("#stage").addEventListener("touchend", e => {
+  if (x0 === null) return;
+  const dx = e.changedTouches[0].clientX - x0;
+  if (Math.abs(dx) > 50) show(cur + (dx < 0 ? 1 : -1));
+  x0 = null;
+}, { passive: true });
+
+(() => {
+  if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  const hero = $(".hero"), shot = $(".shot"), tab = $(".tab");
+  const words = [...hero.querySelectorAll("h1 span")];
+  const facts = [...hero.querySelectorAll(".facts div")];
+  const wide = matchMedia("(min-width: 720px)");
+  let queued = false;
+  function update() {
+    queued = false;
+    const y = Math.max(0, window.scrollY);
+    if (y > hero.offsetHeight) return;
+        hero.style.setProperty("--py", Math.min(y * 0.12, shot.offsetHeight * 0.1) + "px");
+    hero.style.setProperty("--by", Math.min(y * 0.06, 24) + "px");
+        words.forEach((w, i) => {
+      const x = Math.min(y * 0.04 * (i + 1), 16 * (i + 1));
+      const v = wide.matches ? Math.min(y * 0.04 * (i + 1), 20 * (i + 1)) : 0;
+      w.style.transform = `translate3d(${x}px, ${v}px, 0)`;
+    });
+        tab.style.transform = `translate3d(0, ${-Math.min(y * 0.06, 28)}px, 0)`;
+        facts.forEach((f, i) => { f.style.transform = `translate3d(0, ${Math.min(y * 0.03 * i, 10 * i)}px, 0)`; });
+  }
+  const queue = () => { if (!queued) { queued = true; requestAnimationFrame(update); } };
+  addEventListener("scroll", queue, { passive: true });
+  addEventListener("resize", queue);
+  update();
+})();
+</script>
+</body>
+</html>
