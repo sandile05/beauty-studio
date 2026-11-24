@@ -10,15 +10,15 @@
 <meta property="og:description" content="Nails, brows, lashes and hair by appointment. See prices and book on WhatsApp.">
 <meta property="og:image" content="https://res.cloudinary.com/durqfeb2i/image/upload/f_jpg,q_auto,c_fill,g_auto,w_1200,h_630/v1789911618/de606980808dff2cc6e316cebf7f8f18_rxvfph.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#C8391F">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23C8391F'/%3E%3Ctext x='16' y='23' font-size='20' font-family='Arial' font-weight='700' text-anchor='middle' fill='white'%3EB%3C/text%3E%3C/svg%3E">
+<meta name="theme-color" content="#8B6B5A">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%238B6B5A'/%3E%3Ctext x='16' y='23' font-size='20' font-family='Arial' font-weight='700' text-anchor='middle' fill='white'%3EB%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Karla:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
 :root{
-  --bg:#fff; --ink:#161616; --muted:#595959; --line:#e4e4e4; --accent:#C8391F;
+  --bg:#fff; --ink:#161616; --muted:#595959; --line:#e4e4e4; --accent:#8B6B5A;
   --pad:clamp(20px,5vw,64px); --sec:clamp(64px,10vw,120px);
 }
 *{box-sizing:border-box;margin:0;padding:0}
@@ -48,13 +48,13 @@ img{display:block;width:100%;height:100%;object-fit:cover}
 .hero h1{font-size:clamp(3.4rem,17vw,6rem);letter-spacing:-.05em;line-height:.88}
 .hero h1 span{display:block;width:max-content;max-width:100%}
 .hero h1 span:nth-child(even){color:var(--accent)}
-.hero h1 span,.tab,.facts div{will-change:transform}
+.hero h1 span,.tab{will-change:transform}
 .hero .shot img{position:absolute;left:0;top:-10%;height:120%;width:100%;transform:translate3d(0,var(--py,0px),0);will-change:transform}
 .visual{position:relative;padding:0 16px 16px 0}
 .frame{position:relative}
 .frame::before{content:"";position:absolute;inset:16px -16px -16px 16px;background:var(--accent);transform:translate3d(0,var(--by,0px),0)}
 .shot{position:relative;aspect-ratio:4/5;overflow:hidden;background:#eee}
-.tab{position:absolute;left:0;bottom:16px;width:min(80%,320px);background:var(--bg);padding:24px 24px 16px 0}
+.tab{position:absolute;left:0;bottom:16px;width:min(80%,320px);background:rgba(255,255,255,.86);padding:24px 24px 16px 0}
 .tab p{font-size:1rem;margin-bottom:16px}
 .facts{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--ink);margin-top:8px}
 .facts div{padding:16px 12px 0 0}
@@ -235,7 +235,7 @@ const CONFIG = {
   city: "Sandton, Johannesburg",
   facts: [["Open", "Tue to Sun"], ["From", "R320"], ["Where", "Sandton"]],
   schemaHours: ["Tu-Fr 09:00-19:00", "Sa 08:00-18:00", "Su 10:00-16:00"],
-  accent: "#C8391F",
+  accent: "#8B6B5A",
 
   whatsapp: "27000000000",
   bookingMessage: "Hi, I would like to book a session.",
@@ -260,15 +260,15 @@ const CONFIG = {
     hero: "https://res.cloudinary.com/durqfeb2i/image/upload/v1789911618/de606980808dff2cc6e316cebf7f8f18_rxvfph.jpg",
     visit: "https://res.cloudinary.com/durqfeb2i/image/upload/v1794991621/b598f11704b58be9f6ed18d4418afaad_w6bcey.jpg",
     gallery: [
-      "https://res.cloudinary.com/durqfeb2i/image/upload/v1789911448/067700c35a774da3a234d1a731a29ba8_wxgqvf.jpg",
-      "https://res.cloudinary.com/durqfeb2i/image/upload/v1789911498/32b7434f9f7b92464e07427d326b1c4f_wsrsce.jpg",
-      "https://res.cloudinary.com/durqfeb2i/image/upload/v1789911394/4f24e4e04a7233de0c725c613e8d6aaf_yxodg7.jpg",
-      "https://res.cloudinary.com/durqfeb2i/image/upload/v1789911621/a7721b56c6898f835d76cceb9d35db82_caucqf.jpg",
-      "https://res.cloudinary.com/durqfeb2i/image/upload/v1789911497/c3a5eace9d5075fa24d6b845111bd725_fjfuhz.jpg",
-      "https://res.cloudinary.com/durqfeb2i/image/upload/v1789911449/07e50b0dcb6103482c57a12c3810f997_tqupnf.jpg",
-      "https://res.cloudinary.com/durqfeb2i/image/upload/v1789911619/b7ac918d203d84cea0aa7242cc25d0b7_p5gwsw.jpg",
-      "https://res.cloudinary.com/durqfeb2i/image/upload/v1789911503/87a8e313d9da6ec08b94cec6423a79c8_foswdd.jpg",
-      "https://res.cloudinary.com/durqfeb2i/image/upload/v1789911623/e5f04db4c4599f3b5b0dcc4cea059a05_vzo4bv.jpg"
+      { src: "https://res.cloudinary.com/durqfeb2i/image/upload/v1789911448/067700c35a774da3a234d1a731a29ba8_wxgqvf.jpg", service: "Soft glam" },
+      { src: "https://res.cloudinary.com/durqfeb2i/image/upload/v1789911498/32b7434f9f7b92464e07427d326b1c4f_wsrsce.jpg", service: "Lash extensions" },
+      { src: "https://res.cloudinary.com/durqfeb2i/image/upload/v1789911394/4f24e4e04a7233de0c725c613e8d6aaf_yxodg7.jpg", service: "Nail sculpting" },
+      { src: "https://res.cloudinary.com/durqfeb2i/image/upload/v1789911621/a7721b56c6898f835d76cceb9d35db82_caucqf.jpg", service: "Hair installs" },
+      { src: "https://res.cloudinary.com/durqfeb2i/image/upload/v1789911497/c3a5eace9d5075fa24d6b845111bd725_fjfuhz.jpg", service: "Lash extensions" },
+      { src: "https://res.cloudinary.com/durqfeb2i/image/upload/v1789911449/07e50b0dcb6103482c57a12c3810f997_tqupnf.jpg", service: "Brow shaping" },
+      { src: "https://res.cloudinary.com/durqfeb2i/image/upload/v1789911619/b7ac918d203d84cea0aa7242cc25d0b7_p5gwsw.jpg", service: "Hair installs" },
+      { src: "https://res.cloudinary.com/durqfeb2i/image/upload/v1789911503/87a8e313d9da6ec08b94cec6423a79c8_foswdd.jpg", service: "Lash extensions" },
+      { src: "https://res.cloudinary.com/durqfeb2i/image/upload/v1789911623/e5f04db4c4599f3b5b0dcc4cea059a05_vzo4bv.jpg", service: "Hair installs" }
     ],
     alt: "Recent work from the studio"
   },
@@ -424,22 +424,20 @@ $("#stage").addEventListener("touchend", e => {
   if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
   const hero = $(".hero"), shot = $(".shot"), tab = $(".tab");
   const words = [...hero.querySelectorAll("h1 span")];
-  const facts = [...hero.querySelectorAll(".facts div")];
   const wide = matchMedia("(min-width: 720px)");
   let queued = false;
   function update() {
     queued = false;
     const y = Math.max(0, window.scrollY);
     if (y > hero.offsetHeight) return;
-        hero.style.setProperty("--py", Math.min(y * 0.12, shot.offsetHeight * 0.1) + "px");
+    hero.style.setProperty("--py", Math.min(y * 0.12, shot.offsetHeight * 0.1) + "px");
     hero.style.setProperty("--by", Math.min(y * 0.06, 24) + "px");
-        words.forEach((w, i) => {
+    words.forEach((w, i) => {
       const x = Math.min(y * 0.04 * (i + 1), 16 * (i + 1));
       const v = wide.matches ? Math.min(y * 0.04 * (i + 1), 20 * (i + 1)) : 0;
       w.style.transform = `translate3d(${x}px, ${v}px, 0)`;
     });
-        tab.style.transform = `translate3d(0, ${-Math.min(y * 0.06, 28)}px, 0)`;
-        facts.forEach((f, i) => { f.style.transform = `translate3d(0, ${Math.min(y * 0.03 * i, 10 * i)}px, 0)`; });
+    tab.style.transform = `translate3d(0, ${-Math.min(y * 0.06, 28)}px, 0)`;
   }
   const queue = () => { if (!queued) { queued = true; requestAnimationFrame(update); } };
   addEventListener("scroll", queue, { passive: true });
